@@ -14,7 +14,11 @@
 @screen-only-l: ~'(min-width: 1000px)';
 
 .grid {
-    background-image: linear-gradient(to right, transparent @column-padding-s * 2, rgba(255, 0, 0, 0.1) 1px);
+    background-image: linear-gradient(
+        to right,
+        transparent @column-padding-s * 2,
+        rgba(255, 0, 0, 0.1) 1px
+    );
     background-size: calc(@column-width-s + @column-padding-s);
     background-position: -10px 0;
     position: fixed;
@@ -31,7 +35,11 @@
     }
 
     @media @screen-gt-s {
-        background-image: linear-gradient(to right, transparent @column-padding-m * 2, rgba(255, 0, 0, 0.1) 1px);
+        background-image: linear-gradient(
+            to right,
+            transparent @column-padding-m * 2,
+            rgba(255, 0, 0, 0.1) 1px
+        );
         background-size: @column-width-m auto;
         background-position: -@column-padding-m 0;
         width: @column-width-m * 6;
