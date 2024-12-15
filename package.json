@@ -1,30 +1,40 @@
 {
-    "name": "html-and-css-practice",
-    "version": "1.0.0",
-    "homepage": "",
-    "repository": "",
-    "author": "Roman Dmiterko",
-    "license": "MIT",
-    "scripts": {
-        "dev": "parcel *.html",
-        "build": "parcel build *.html --public-url './'",
-        "deploy": "yarn build && gh-pages -d dist",
-        "format": "prettier --write .",
-        "postinstall": "cp tools/pre-commit .git/hooks || true",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
-    },
-    "devDependencies": {
-        "@eslint/js": "^9.16.0",
-        "@parcel/transformer-less": "^2.8.0",
-        "eslint": "^9.16.0",
-        "gh-pages": "^3.2.3",
-        "globals": "^15.13.0",
-        "less": "^4.1.3",
-        "lint-staged": "^15.2.10",
-        "parcel": "^2.8.0",
-        "prettier": "^3.4.2",
-        "yarn": "^1.22.22"
-    },
-    "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  "name": "html-and-css-practice",
+  "version": "1.0.0",
+  "homepage": "",
+  "repository": "",
+  "author": "Roman Dmiterko",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel *.html",
+    "build": "parcel build *.html --public-url './'",
+    "deploy": "yarn build && gh-pages -d dist",
+    "format": "prettier --write .",
+    "postinstall": "cp tools/pre-commit .git/hooks || true",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.jsx": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@parcel/transformer-less": "^2.8.0",
+    "eslint": "^9.16.0",
+    "gh-pages": "^3.2.3",
+    "globals": "^15.13.0",
+    "less": "^4.1.3",
+    "lint-staged": "^15.2.10",
+    "parcel": "^2.8.0",
+    "prettier": "^3.4.2",
+    "yarn": "^1.22.22"
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
