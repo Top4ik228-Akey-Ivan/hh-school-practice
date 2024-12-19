@@ -8,4 +8,4 @@ document.addEventListener('keydown', (event) => {
   }
 });
 const foo = 1;
-console.log(f);
+console.log(foo);
