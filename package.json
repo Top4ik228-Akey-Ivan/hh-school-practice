@@ -26,7 +26,7 @@
     "*.+(html|js)": [
       "prettier --write",
       "eslint .",
-      "eslint . --fix",
+      
       "git add"
     ]
   },
